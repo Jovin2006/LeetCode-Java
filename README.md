@@ -51,32 +51,7 @@ Some of the major topics covered in this repository include:
 
 ---
 
-# 📂 Repository Organization
-
-The repository is organized topic-wise for easier navigation and practice.
-
-Example structure:
-
-```bash
-LeetCode-Java/
-│
-├── Arrays/
-├── Strings/
-├── LinkedLists/
-├── Trees/
-├── Graphs/
-├── DynamicProgramming/
-└── ...
-```
-
-Each file may contain:
-
-- ✅ Problem solution
-- 📌 Problem title
-- 💡 Approach used
-- 🧾 Helpful comments (optional)
-
----
+ 
 
 # 💻 Programming Language
 
