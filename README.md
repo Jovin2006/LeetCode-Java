@@ -1,84 +1,132 @@
-🧠 LeetCode Problem Solutions Repository
-📝 Overview
-This repository contains a curated collection of my solutions to problems from LeetCode, one of the most widely used platforms for practicing Data Structures and Algorithms (DSA).
+# 🚀 LeetCode Solutions Repository
 
-The purpose of this repository is to document my learning journey, improve problem-solving skills, and build a strong foundation in algorithmic thinking and computational efficiency.
+## 📖 Introduction
 
-Each solution is implemented with a focus on:
+Welcome to my LeetCode solutions repository!  
+This repository is a collection of coding problems that I have solved while practicing Data Structures and Algorithms (DSA) and improving my programming skills.
 
-Clean and readable code
-Correctness
-Optimized performance
-The problems solved here cover a wide range of topics commonly encountered in technical interviews, coding assessments, and competitive programming.
+The main purpose of this repository is to:
 
-This repository also serves as a personal reference for revisiting previously solved problems and understanding different approaches to solving algorithmic challenges.
+- Practice problem-solving regularly
+- Improve logical and analytical thinking
+- Learn efficient algorithms and data structures
+- Prepare for coding interviews and assessments
+- Track my coding progress over time
 
-🎯 Objectives
-The main objectives of maintaining this repository include:
+Each solution is written with simplicity, readability, and optimization in mind.
 
-📚 Strengthening my understanding of Data Structures and Algorithms
-🧩 Improving problem-solving and logical thinking skills
-⚡ Practicing efficient coding techniques
-💼 Preparing for technical interviews and coding assessments
-🗂️ Maintaining a structured archive of solved problems
-🌍 Sharing solutions with the developer community
-📚 Topics Covered
-The problems solved in this repository span across multiple important areas in computer science, including:
+---
 
-🔢 Arrays
-🔤 Strings
-🔗 Linked Lists
-📦 Stacks and Queues
-🗄️ Hash Tables
-🔁 Recursion and Backtracking
-🌳 Binary Trees and Binary Search Trees
-🌐 Graph Algorithms
-📊 Dynamic Programming
-🎯 Greedy Algorithms
-🪟 Sliding Window Technique
-👉 Two Pointer Technique
-🔎 Searching and Sorting Algorithms
-🧮 Bit Manipulation
-Each topic helps in developing a deeper understanding of fundamental algorithmic concepts.
+# 🎯 What You’ll Find Here
 
-Each folder represents a specific category of problems.
+This repository includes solutions for problems covering different levels of difficulty ranging from Easy to Hard.
 
-Individual solution files typically include:
+The solutions focus on:
 
-📌 Problem name
-💻 Implementation code
-🧾 Optional comments explaining the approach
-💻 Languages Used
-Solutions in this repository are primarily implemented in:
+- Writing clean and understandable code
+- Improving time and space complexity
+- Exploring different approaches to solve problems
+- Building strong DSA fundamentals
 
-☕ Java
-The goal is to strengthen programming proficiency and write efficient and optimized implementations.
+---
 
-🧩 Learning Approach
-While solving each problem, the following systematic approach is generally followed:
+# 📚 Topics Practiced
 
-1️⃣ Understand the problem statement clearly 2️⃣ Analyze constraints and edge cases 3️⃣ Design an efficient algorithm 4️⃣ Implement the solution with clean and readable code 5️⃣ Optimize time and space complexity where possible 6️⃣ Test the solution with multiple test cases
+Some of the major topics covered in this repository include:
 
-This structured approach helps build strong analytical thinking and programming skills.
+- 🔢 Arrays
+- 🔤 Strings
+- 🔗 Linked Lists
+- 📦 Stacks & Queues
+- 🌳 Trees and BSTs
+- 🌐 Graphs
+- 📊 Dynamic Programming
+- 🎯 Greedy Algorithms
+- 🔁 Recursion & Backtracking
+- 🪟 Sliding Window
+- 👉 Two Pointers
+- 🔎 Searching & Sorting
+- 🧮 Bit Manipulation
+- 🗄️ HashMaps & HashSets
 
-🚀 Future Improvements
-In the future, this repository may include:
+---
 
-🧾 Detailed explanations for each solution
-⏱️ Time and space complexity analysis
-🔄 Multiple approaches for the same problem
-📊 Visual diagrams for complex algorithms
-🔗 Links to related problems
-📈 Performance comparison of different solutions
-⚠️ Disclaimer
-All problems referenced in this repository belong to their respective owners on the LeetCode platform.
+# 📂 Repository Organization
 
-The solutions shared here are intended purely for educational purposes and personal practice.
+The repository is organized topic-wise for easier navigation and practice.
 
-🎓 Conclusion
-This repository represents my continuous effort to enhance coding skills and deepen my understanding of Data Structures and Algorithms.
+Example structure:
 
-By consistently solving problems and documenting solutions, I aim to improve my ability to tackle real-world programming challenges and technical interviews effectively.
+```bash
+LeetCode-Java/
+│
+├── Arrays/
+├── Strings/
+├── LinkedLists/
+├── Trees/
+├── Graphs/
+├── DynamicProgramming/
+└── ...
+```
 
-⭐ Contributions, suggestions, and discussions are always welcome.# LeetCode-Java
-A collection of my LeetCode solutions that reflects my problem-solving skills and understanding of data structures and algorithms, created as part of my coding practice and interview preparation journey.
+Each file may contain:
+
+- ✅ Problem solution
+- 📌 Problem title
+- 💡 Approach used
+- 🧾 Helpful comments (optional)
+
+---
+
+# 💻 Programming Language
+
+Most of the solutions in this repository are implemented using:
+
+- ☕ Java
+
+The aim is to strengthen Java programming skills while solving algorithmic challenges efficiently.
+
+---
+
+# 🧠 My Learning Process
+
+While solving problems, I usually follow this approach:
+
+1. Understand the problem statement
+2. Identify constraints and edge cases
+3. Think of an efficient approach
+4. Implement the solution cleanly
+5. Optimize wherever possible
+6. Test using different inputs
+
+This process helps me improve both coding efficiency and logical thinking.
+
+---
+
+# 📈 Future Plans
+
+I plan to keep updating this repository regularly with:
+
+- More LeetCode solutions
+- Better optimized approaches
+- Complexity analysis
+- Additional explanations
+- Multiple solutions for selected problems
+
+---
+
+# ⚠️ Note
+
+All problem statements belong to their respective owners on the LeetCode platform.
+
+This repository is created for learning, practice, and educational purposes only.
+
+---
+
+# ⭐ Final Thoughts
+
+This repository reflects my continuous learning journey in programming and problem solving.
+
+Consistent practice through LeetCode helps me improve my understanding of algorithms, write better code, and become more confident in tackling technical interview problems.
+
+Feel free to explore the repository and follow along with my progress 🚀
