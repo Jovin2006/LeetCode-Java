@@ -1,7 +1,7 @@
 LEETCODE PROBLEM SOLVING
 PROBLEM-> Count the Number of Special Characters 
 
-class Solution {
+class Solution { 
 public:
     int numberOfSpecialChars(string word) {
         int count = 0;
