@@ -2,21 +2,19 @@ LEETCODE PROBLEM SOLVING
 PROBLEM->Two Sum
 
 class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> map;
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < nums.size(); i++) { 
+        for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
- 
-            if (map.count(complement)) {
-                return {map[complement], i};
+
+            if (map.containsKey(complement)) {
+                return new int[] { map.get(complement), i };
             }
 
-            map[nums[i]] = i;
+            map.put(nums[i], i);
         }
 
-        return {};
+        return new int[] {};
     }
-};
- 
+}
