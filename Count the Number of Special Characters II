@@ -1,0 +1,19 @@
+LEETCODE PROBLEM SOLVING
+PROBLEM -> Count the Number of Special Characters
+
+class Solution {
+public:
+    int numberOfSpecialChars(string word) {
+        int ans = 0;
+
+        for (char c = 'a'; c <= 'z'; c++) {
+            int a = word.rfind(c);
+            int b = word.find(c - 32);
+
+            if (a != -1 && b != -1 && a < b)
+                ans++;
+        }
+
+        return ans;
+    }
+};
