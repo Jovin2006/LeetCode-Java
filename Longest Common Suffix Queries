@@ -2,39 +2,69 @@ LEETCODE PROBLEM SOLVING
 PROBLEM ->  Longest Common Suffix Queries
 
 class Solution {
+
+    class TrieNode {
+        TrieNode[] next = new TrieNode[26];
+        int index = -1;
+    }
+
+    TrieNode root = new TrieNode();
+
+    public void insert(String s, int ind, String[] wordsContainer) {
+
+        TrieNode temp = root;
+
+        if(temp.index == -1 ||
+           wordsContainer[ind].length() < wordsContainer[temp.index].length()) {
+            temp.index = ind;
+        }
+
+        for(int i = s.length() - 1; i >= 0; i--) {
+
+            int c = s.charAt(i) - 'a';
+
+            if(temp.next[c] == null)
+                temp.next[c] = new TrieNode();
+
+            temp = temp.next[c];
+
+            if(temp.index == -1 ||
+               wordsContainer[ind].length() < wordsContainer[temp.index].length()) {
+                temp.index = ind;
+            }
+        }
+    }
+
+    public int search(String s) {
+
+        TrieNode temp = root;
+
+        for(int i = s.length() - 1; i >= 0; i--) {
+
+            int c = s.charAt(i) - 'a';
+
+            if(temp.next[c] == null)
+                break;
+
+            temp = temp.next[c];
+        }
+
+        return temp.index;
+    }
+
     public int[] stringIndices(String[] wordsContainer, String[] wordsQuery) {
+
+        for(int i = 0; i < wordsContainer.length; i++) {
+            insert(wordsContainer[i], i, wordsContainer);
+        }
+
         int[] ans = new int[wordsQuery.length];
 
-        for (int i = 0; i < wordsQuery.length; i++) {
-
-            int index = 0;
-            int max = -1;
-
-            for (int j = 0; j < wordsContainer.length; j++) {
-
-                int p1 = wordsContainer[j].length() - 1;
-                int p2 = wordsQuery[i].length() - 1;
-                int count = 0;
-
-                while (p1 >= 0 && p2 >= 0 &&
-                       wordsContainer[j].charAt(p1) == wordsQuery[i].charAt(p2)) {
-                    count++;
-                    p1--;
-                    p2--;
-                }
-
-                if (count > max ||
-                   (count == max &&
-                   wordsContainer[j].length() < wordsContainer[index].length())) {
-
-                    max = count;
-                    index = j;
-                }
-            }
-
-            ans[i] = index;
+        for(int i = 0; i < wordsQuery.length; i++) {
+            ans[i] = search(wordsQuery[i]);
         }
 
         return ans;
     }
+}
 }
