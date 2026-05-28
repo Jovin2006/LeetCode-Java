@@ -1,0 +1,40 @@
+LEETCODE PROBLEM SOLVING 
+PROBLEM ->  Longest Common Suffix Queries
+
+class Solution {
+    public int[] stringIndices(String[] wordsContainer, String[] wordsQuery) {
+        int[] ans = new int[wordsQuery.length];
+
+        for (int i = 0; i < wordsQuery.length; i++) {
+
+            int index = 0;
+            int max = -1;
+
+            for (int j = 0; j < wordsContainer.length; j++) {
+
+                int p1 = wordsContainer[j].length() - 1;
+                int p2 = wordsQuery[i].length() - 1;
+                int count = 0;
+
+                while (p1 >= 0 && p2 >= 0 &&
+                       wordsContainer[j].charAt(p1) == wordsQuery[i].charAt(p2)) {
+                    count++;
+                    p1--;
+                    p2--;
+                }
+
+                if (count > max ||
+                   (count == max &&
+                   wordsContainer[j].length() < wordsContainer[index].length())) {
+
+                    max = count;
+                    index = j;
+                }
+            }
+
+            ans[i] = index;
+        }
+
+        return ans;
+    }
+}
