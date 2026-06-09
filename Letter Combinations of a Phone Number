@@ -1,0 +1,31 @@
+LEETCODE PROBLEM SOLVING
+PROBLEM -> Letter Combinations of a Phone Number
+
+class Solution {
+
+    List<String> ans = new ArrayList<>();
+    String[] a = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+
+    public List<String> letterCombinations(String digits) {
+
+        if(digits.length() == 0)
+            return ans;
+
+        solve(digits, 0, "");
+        return ans;
+    }
+
+    public void solve(String digits, int i, String s) {
+
+        if(i == digits.length()) {
+            ans.add(s);
+            return;
+        }
+
+        String t = a[digits.charAt(i) - '0'];
+
+        for(int j = 0; j < t.length(); j++) {
+            solve(digits, i + 1, s + t.charAt(j));
+        }
+    }
+}
