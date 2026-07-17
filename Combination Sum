@@ -16,7 +16,7 @@ class Solution {
 
         if (target == 0) {
             ans.add(new ArrayList<>(list));
-            return;
+            return; 
         }
 
         if (index == candidates.length || target < 0)
