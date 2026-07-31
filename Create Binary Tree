@@ -3,24 +3,18 @@ PROBLEM -> Create Binary Tree
 
 class Solution {
     public TreeNode createBinaryTree(int[][] d) {
-
         HashMap<Integer, TreeNode> m = new HashMap<>();
         HashSet<Integer> s = new HashSet<>();
-
         for(int[] x : d) {
             m.putIfAbsent(x[0], new TreeNode(x[0]));
             m.putIfAbsent(x[1], new TreeNode(x[1]));
-
             if(x[2] == 1) m.get(x[0]).left = m.get(x[1]);
             else m.get(x[0]).right = m.get(x[1]);
-
             s.add(x[1]);
         }
-
         for(int[] x : d)
             if(!s.contains(x[0]))
                 return m.get(x[0]);
-
         return null;
     }
 }
