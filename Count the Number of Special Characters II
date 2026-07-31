@@ -4,15 +4,12 @@ PROBLEM -> Count the Number of Special Characters
 class Solution {
     public int numberOfSpecialChars(String word) {
         int ans = 0;
-
         for (char c = 'a'; c <= 'z'; c++) {
             int a = word.lastIndexOf(c);
             int b = word.indexOf(c - 32);
-
             if (a != -1 && b != -1 && a < b)
                 ans++;
         }
-
         return ans;
     }
 }
