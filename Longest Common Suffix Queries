@@ -2,32 +2,22 @@ LEETCODE PROBLEM SOLVING
 PROBLEM ->  Longest Common Suffix Queries
 
 class Solution {
-
     class TrieNode {
         TrieNode[] next = new TrieNode[26];
         int index = -1;
     }
-
     TrieNode root = new TrieNode();
-
     public void insert(String s, int ind, String[] wordsContainer) {
-
         TrieNode temp = root;
-
         if(temp.index == -1 ||
            wordsContainer[ind].length() < wordsContainer[temp.index].length()) {
             temp.index = ind;
         }
-
         for(int i = s.length() - 1; i >= 0; i--) {
-
             int c = s.charAt(i) - 'a';
-
             if(temp.next[c] == null)
                 temp.next[c] = new TrieNode();
-
             temp = temp.next[c];
-
             if(temp.index == -1 ||
                wordsContainer[ind].length() < wordsContainer[temp.index].length()) {
                 temp.index = ind;
@@ -36,30 +26,20 @@ class Solution {
     }
 
     public int search(String s) {
-
         TrieNode temp = root;
-
         for(int i = s.length() - 1; i >= 0; i--) {
-
             int c = s.charAt(i) - 'a';
-
             if(temp.next[c] == null)
                 break;
-
             temp = temp.next[c];
         }
-
         return temp.index;
     }
-
     public int[] stringIndices(String[] wordsContainer, String[] wordsQuery) {
-
         for(int i = 0; i < wordsContainer.length; i++) {
             insert(wordsContainer[i], i, wordsContainer);
         }
-
         int[] ans = new int[wordsQuery.length];
-
         for(int i = 0; i < wordsQuery.length; i++) {
             ans[i] = search(wordsQuery[i]);
         }
